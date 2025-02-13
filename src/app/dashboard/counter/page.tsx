@@ -1,5 +1,5 @@
 
-import Contador from "@/app/cart/Contador";
+import Contador from "@/cart/Contador";
 import Image from "next/image";
 
 

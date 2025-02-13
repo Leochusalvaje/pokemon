@@ -1,5 +1,6 @@
-import { PokemonsResponse, SimplePokemon } from '@/app/pokemons';
-import  Tarjeta  from '@/app/components/tarjeta';
+import { PokemonsResponse, SimplePokemon } from '@/pokemons';
+import  Tarjeta  from '@/components/tarjeta';
+import { notFound } from 'next/navigation';
 
 const getPokemons = async (limit = 20, offset = 0) => {
 
@@ -17,7 +18,7 @@ const data: PokemonsResponse = await fetch(`https://pokeapi.co/api/v2/pokemon?li
       id: id,
       name: pokemon.name,
       urlImage: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${id}.svg`, // Generamos la URL de la imagen
-      url:`https://pokeapi.co/api/v2/pokemon/${id}/`
+      url:`pokemon/${id}`
     
     };
   });

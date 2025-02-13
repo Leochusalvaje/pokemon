@@ -1,4 +1,4 @@
-import {PokemonsResponse,Result} from '@/app/pokemons/interfaces/pokemons-responses'
+import {PokemonsResponse,Result} from '@/pokemons/interfaces/pokemons-responses'
 import Image from 'next/image'
 import Link from 'next/link'
 import {FC} from 'react'
@@ -20,7 +20,7 @@ interface TarjetaProps {
     <div className="grid grid-cols-1 gap-4">
       <div className="group pb-24 relative overflow-hidden">
         <div className="group-hover:translate-y-0 transition-all duration-700 translate-y-full top-0 right-0 bottom-24 left-0 absolute bg-gradient-to-b from-transparent to-orange-600 z-10"></div>
-        <Image   width={50} height={50} src={urlImage} className="transition-all group-hover:scale-125 duration-700 mr-4 h-60 w-auto" alt=""/>
+        <Image  alt={name} width={50} height={50} src={urlImage} className="transition-all group-hover:scale-125 duration-700 mr-4 h-60 w-auto" />
         <div className="bg-orange-600 absolute z-10 bottom-0 left-0 w-full h-24 flex flex-col justify-center items-center">
           <div className="z-20 absolute -top-5 w-full flex justify-center">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="group-hover:bg-white group-hover:text-orange-600 group-hover:rotate-180 w-10 h-10 bg-black text-white p-2 rounded-full transition-all">
