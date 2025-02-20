@@ -12,7 +12,7 @@ interface TarjetaProps {
 }
 
 
- const Tarjeta:FC<TarjetaProps> = ({name,urlImage,urlPok}) => {
+export const Tarjeta:FC<TarjetaProps> = ({name,urlImage,urlPok}) => {
   return (
 
 <div className="relative flex flex-col justify-center overflow-hidden bg-gray-50 py-12 sm:py-8">
@@ -51,4 +51,3 @@ interface TarjetaProps {
 </div>
 )}
 
-export default Tarjeta

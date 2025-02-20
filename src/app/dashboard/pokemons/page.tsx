@@ -1,5 +1,5 @@
 import { PokemonsResponse, SimplePokemon } from '@/pokemons';
-import  Tarjeta  from '@/components/tarjeta';
+import  {Tarjeta}  from '@/components/tarjeta';
 import { notFound } from 'next/navigation';
 
 const getPokemons = async (limit = 20, offset = 0) => {
@@ -7,7 +7,7 @@ const getPokemons = async (limit = 20, offset = 0) => {
 const data: PokemonsResponse = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`)
   .then((res) => res.json())
   .then((json) => {
-    console.log("Datos obtenidos:", json);
+    //console.log("Datos obtenidos:", json);
     return json;
   });
 
@@ -26,7 +26,7 @@ const data: PokemonsResponse = await fetch(`https://pokeapi.co/api/v2/pokemon?li
   return pokemons;
 };
 
-console.log(getPokemons)
+//console.log(getPokemons)
 
 export default async function PokemonsPage() {
   const pokemons = await getPokemons(30);

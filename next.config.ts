@@ -1,18 +1,20 @@
 import type { NextConfig } from "next";
-import { hostname } from "os";
+
 
 const nextConfig: NextConfig = {
 images:{
-remotePatterns:[{
+
+
+  remotePatterns:[
+  {
 protocol:'https',
-hostname:'images.unsplash.com'
-
-
-}]
-
-
+hostname:'images.unsplash.com',}
+,{
+  protocol: 'https',
+  hostname: "raw.githubusercontent.com",
 }
-
+  ]
+}
 
 
   /* config options here */
